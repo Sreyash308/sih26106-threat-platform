@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { FileText, FileDown, Download, ExternalLink, ShieldCheck, RefreshCw } from "lucide-react";
-import { fetchInvestigations, getPDFReportUrl, getJSONExportUrl } from "@/lib/api";
+import { FileText, FileDown, Download, ExternalLink, RefreshCw } from "lucide-react";
+import { fetchInvestigations, fetchInvestigation } from "@/lib/api";
 import { InvestigationListItem } from "@/lib/types";
 import { formatDate, getSeverityStyle } from "@/lib/utils";
+import { exportInvestigationPDF, exportInvestigationJSON } from "@/lib/report-export";
 
 export default function ReportsPage() {
   const [items, setItems] = useState<InvestigationListItem[]>([]);
@@ -106,24 +107,34 @@ export default function ReportsPage() {
                           <span>View Case</span>
                           <ExternalLink className="w-3 h-3" />
                         </Link>
-                        <a
-                          href={getPDFReportUrl(inv.id)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-sm transition-colors"
+                        <button
+                          onClick={async () => {
+                            try {
+                              const detail = await fetchInvestigation(inv.id);
+                              exportInvestigationPDF(detail);
+                            } catch (e: any) {
+                              alert(e.message || "Failed to load case dossier for report generation.");
+                            }
+                          }}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-sm transition-colors cursor-pointer"
                         >
                           <FileDown className="w-3 h-3" />
                           <span>PDF Report</span>
-                        </a>
-                        <a
-                          href={getJSONExportUrl(inv.id)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-colors border border-surface-border"
+                        </button>
+                        <button
+                          onClick={async () => {
+                            try {
+                              const detail = await fetchInvestigation(inv.id);
+                              exportInvestigationJSON(detail);
+                            } catch (e: any) {
+                              alert(e.message || "Failed to load case dossier.");
+                            }
+                          }}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-colors border border-surface-border cursor-pointer"
                         >
                           <Download className="w-3 h-3" />
                           <span>JSON</span>
-                        </a>
+                        </button>
                       </td>
                     </tr>
                   );

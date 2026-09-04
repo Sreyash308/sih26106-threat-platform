@@ -20,9 +20,10 @@ import {
   Hash,
 } from "lucide-react";
 
-import { fetchInvestigation, getPDFReportUrl, getJSONExportUrl, updateInvestigationStatus } from "@/lib/api";
+import { fetchInvestigation, updateInvestigationStatus } from "@/lib/api";
 import { InvestigationDetail } from "@/lib/types";
 import { formatDate, getSeverityStyle, getStatusStyle } from "@/lib/utils";
+import { exportInvestigationPDF, exportInvestigationJSON } from "@/lib/report-export";
 
 import ThreatGauge from "@/components/threat/ThreatGauge";
 import AuthCards from "@/components/authentication/AuthCards";
@@ -144,25 +145,21 @@ export default function InvestigationDetailPage() {
             <span>Mark Reviewed</span>
           </button>
 
-          <a
-            href={getPDFReportUrl(investigation.id)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-sm transition-colors"
+          <button
+            onClick={() => investigation && exportInvestigationPDF(investigation)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-sm transition-colors cursor-pointer"
           >
             <FileDown className="w-3.5 h-3.5" />
             <span>Export PDF Report</span>
-          </a>
+          </button>
 
-          <a
-            href={getJSONExportUrl(investigation.id)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-surface-border text-slate-300 text-xs font-semibold transition-colors"
+          <button
+            onClick={() => investigation && exportInvestigationJSON(investigation)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-surface-border text-slate-300 text-xs font-semibold transition-colors cursor-pointer"
           >
             <Download className="w-3.5 h-3.5" />
             <span>JSON</span>
-          </a>
+          </button>
         </div>
       </div>
 
