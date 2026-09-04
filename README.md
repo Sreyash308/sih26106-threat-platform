@@ -1,5 +1,7 @@
 # SIH26106: AI-Powered Email Threat Detection, GeoLocation & Forensic Intelligence Platform
 
+[![Vercel](https://img.shields.io/badge/Vercel-Live_Deployment-black.svg?logo=vercel&logoColor=white)](https://frontend-lake-ten-eg3jz3wr5r.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Sreyash308%2Fsih26106--threat--platform-181717.svg?logo=github&logoColor=white)](https://github.com/Sreyash308/sih26106-threat-platform)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![Next.js](https://img.shields.io/badge/Next.js-14_App_Router-black.svg?logo=next.js&logoColor=white)](https://nextjs.org)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://python.org)
@@ -9,7 +11,9 @@
 
 > **Smart India Hackathon (SIH) Problem ID:** SIH26106  
 > **Organization:** All India Council for Technical Education (AICTE)  
-> **Category:** Cybersecurity / Digital Forensics / AI / Network Security
+> **Category:** Cybersecurity / Digital Forensics / AI / Network Security  
+> **🌐 Live Web Console:** [https://frontend-lake-ten-eg3jz3wr5r.vercel.app](https://frontend-lake-ten-eg3jz3wr5r.vercel.app)  
+> **📦 GitHub Repository:** [https://github.com/Sreyash308/sih26106-threat-platform](https://github.com/Sreyash308/sih26106-threat-platform)
 
 ---
 
@@ -291,10 +295,14 @@ Copy `.env.example` to `.env` in the backend directory to customize external int
 The platform includes 18 automated unit and integration tests covering the complete forensic pipeline:
 
 ```bash
-cd sih26106-threat-platform
+cd sih26106-threat-platform/backend
 
 # Run pytest using the virtual environment
-.\backend\.venv\Scripts\python.exe -m pytest -v backend/tests/
+# Linux / macOS:
+PYTHONPATH=.. ./.venv/bin/pytest tests/ -v
+
+# Windows (PowerShell):
+$env:PYTHONPATH=".." ; .\.venv\Scripts\python.exe -m pytest tests\ -v
 ```
 
 ### Test Results Summary
