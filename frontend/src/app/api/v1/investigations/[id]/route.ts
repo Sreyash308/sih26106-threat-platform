@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { toInvestigationDetail, deleteInvestigationById } from "@/lib/forensic-engine";
 
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
+
 export async function GET(_req: NextRequest, { params }: { params: { id: string } }) {
   try {
     const detail = toInvestigationDetail(params.id);

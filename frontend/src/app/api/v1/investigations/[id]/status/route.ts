@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { updateStatus } from "@/lib/forensic-engine";
 
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
+
 export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     const body = await req.json();
