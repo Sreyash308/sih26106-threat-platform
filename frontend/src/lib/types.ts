@@ -149,6 +149,8 @@ export interface AnalysisSummary {
   threat_level: "SAFE" | "LOW" | "MEDIUM" | "HIGH" | "CRITICAL" | string;
   header_trust_score: number;
   verdict: string;
+  created_at?: string;
+  status?: string;
 }
 
 export interface FullAnalysisResult {
