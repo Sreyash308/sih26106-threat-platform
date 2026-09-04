@@ -1,0 +1,26 @@
+From: "Corporate IT Support" <helpdesk@corporate-headquarters.example>
+To: staff@corporate-headquarters.example
+Subject: Critical Workstation Antivirus Definition Update Notice
+Date: Sun, 30 Aug 2026 12:00:00 +0000
+Message-ID: <spoof-sec-0918@rogue-server.net>
+Reply-To: attacker-inbox@anonymous-relay.top
+Return-Path: <nobody@rogue-server.net>
+Authentication-Results: mx.corporate-headquarters.example;
+ spf=fail (client-ip=203.0.113.195) smtp.mailfrom=nobody@rogue-server.net;
+ dkim=fail (signature did not verify) header.d=corporate-headquarters.example;
+ dmarc=fail action=quarantine header.from=corporate-headquarters.example
+Received-SPF: Fail (mx.corporate-headquarters.example: domain of nobody@rogue-server.net does not designate 203.0.113.195 as permitted sender) client-ip=203.0.113.195;
+Received: from rogue-server.net (rogue-server.net [203.0.113.195])
+    by mx.corporate-headquarters.example with ESMTP id 77102;
+    Sun, 30 Aug 2026 12:00:00 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+All Personnel,
+
+IT is pushing an urgent patch for our endpoint protection client.
+
+Please follow the verification link below to refresh your machine's certificate:
+http://patch-deployment-server.top/update/agent-install
+
+IT Infrastructure Services

@@ -1,0 +1,37 @@
+From: "Engineering Leadership" <engineering-updates@techcorp-defense.example>
+To: engineering-all@techcorp-defense.example
+Subject: Q3 Architecture Review & Infrastructure Migration Roadmap
+Date: Thu, 03 Sep 2026 14:20:00 +0000
+Message-ID: <eng-q3-2026-0903@techcorp-defense.example>
+Reply-To: engineering-updates@techcorp-defense.example
+Return-Path: <engineering-updates@techcorp-defense.example>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=techcorp-defense.example; s=selector1; t=1756910400; h=from:to:subject:date:message-id; bh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=; b=dGVzdF9ka2ltX3NpZ25hdHVyZQ==
+Authentication-Results: mx.techcorp-defense.example;
+ dkim=pass header.d=techcorp-defense.example;
+ spf=pass (client-ip=198.51.100.88) smtp.mailfrom=engineering-updates@techcorp-defense.example;
+ dmarc=pass header.from=techcorp-defense.example
+Received-SPF: Pass (mx.techcorp-defense.example: domain of engineering-updates@techcorp-defense.example designates 198.51.100.88 as permitted sender) client-ip=198.51.100.88;
+Received: from corporate-mail.techcorp-defense.example (corporate-mail.techcorp-defense.example [198.51.100.88])
+    by mx.techcorp-defense.example with ESMTPS id 44109
+    for <engineering-all@techcorp-defense.example>; Thu, 03 Sep 2026 14:20:15 +0000
+Received: from internal-app-01.local (internal-app-01.local [10.0.4.12])
+    by corporate-mail.techcorp-defense.example with ESMTP id 11094;
+    Thu, 03 Sep 2026 14:20:00 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Team,
+
+Here is the finalized agenda for our Q3 Architecture Review taking place tomorrow at 10:00 AM UTC in the engineering auditorium and over our internal video bridge.
+
+Key discussion items:
+1. Microservices decoupling progress and latency metrics
+2. Zero-trust network access (ZTNA) migration timeline
+3. Automated canary deployments in production Kubernetes clusters
+
+Please review the architecturalRFC prior to the meeting:
+https://techcorp-defense.example/internal/wiki/rfc-409
+
+Best regards,
+Engineering Operations
+TechCorp Defense

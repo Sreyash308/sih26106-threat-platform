@@ -1,0 +1,45 @@
+From: "Microsoft 365 Security" <security-alerts@microsoft-security.example>
+To: analyst@enterprise-defense.org
+Subject: URGENT: Your Microsoft 365 account will be suspended within 24 hours
+Date: Fri, 04 Sep 2026 09:14:22 +0000
+Message-ID: <alert-20260904-8921@microsoft-security.example>
+Reply-To: support-tickets@phish-evasion-node.top
+Return-Path: <bounce@unauthorized-relays.com>
+Authentication-Results: mx.enterprise-defense.org;
+ dkim=fail (bad signature) header.d=microsoft-security.example;
+ spf=fail (client-ip=203.0.113.195) smtp.mailfrom=bounce@unauthorized-relays.com;
+ dmarc=fail action=quarantine header.from=microsoft-security.example
+Received-SPF: Fail (mx.enterprise-defense.org: domain of bounce@unauthorized-relays.com does not designate 203.0.113.195 as permitted sender) client-ip=203.0.113.195;
+Received: from mx.enterprise-defense.org (mx.enterprise-defense.org [198.51.100.88])
+    by gateway.enterprise-defense.org with ESMTP id 82193
+    for <analyst@enterprise-defense.org>; Fri, 04 Sep 2026 09:15:02 +0000
+Received: from mail-node-42.suspicious-relay.net (mail-node-42.suspicious-relay.net [203.0.113.195])
+    by mx.enterprise-defense.org with ESMTP id 59281
+    for <analyst@enterprise-defense.org>; Fri, 04 Sep 2026 09:14:30 +0000
+Received: from workstation-dynamic.example (workstation-dynamic.example [192.0.2.1])
+    by mail-node-42.suspicious-relay.net with HTTP id 10928;
+    Fri, 04 Sep 2026 09:14:22 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html>
+<html>
+<head><title>Security Alert</title></head>
+<body>
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <h2 style="color: #d93025;">CRITICAL SECURITY ALERT: Account Suspension Notice</h2>
+    <p>Dear Valued User,</p>
+    <p>We detected multiple unauthorized login attempts to your corporate account from an unrecognized IP address in Moscow, Russia.</p>
+    <p><b>Your account access has been temporarily locked to prevent data exfiltration.</b></p>
+    <p>You must verify your identity and confirm your corporate password within <b>24 hours</b>, or your mailbox and all cloud documents will be permanently terminated.</p>
+    <p style="margin: 30px 0;">
+        <a href="http://secure-portal-update.top/auth/verify?session=98218&redirect=login" 
+           style="background-color: #0078d4; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: bold;">
+           Verify Account Password Immediately
+        </a>
+    </p>
+    <p>Or copy the verification link: <a href="http://203.0.113.195/session/re-activate">https://account.microsoft.com/security/verify-identity</a></p>
+    <p style="color: #666; font-size: 12px;">This is an automated system notification from the IT Security Operations Team.</p>
+</div>
+</body>
+</html>

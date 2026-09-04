@@ -1,0 +1,40 @@
+From: "Accounts Payable Dept" <billing@supplies-logistics-corp.xyz>
+To: finance@victim-enterprise.org
+Subject: OVERDUE INVOICE #INV-884920 - Immediate Remittance Required
+Date: Wed, 02 Sep 2026 11:30:15 +0000
+Message-ID: <inv-884920@supplies-logistics-corp.xyz>
+Reply-To: wire-collections@urgent-remittance-center.top
+Return-Path: <bounce@unverified-relay.net>
+Authentication-Results: mx.victim-enterprise.org;
+ spf=softfail (client-ip=198.51.100.25) smtp.mailfrom=bounce@unverified-relay.net;
+ dkim=none;
+ dmarc=fail action=none header.from=supplies-logistics-corp.xyz
+Received-SPF: Softfail (mx.victim-enterprise.org: transitioning domain of bounce@unverified-relay.net does not designate 198.51.100.25) client-ip=198.51.100.25;
+Received: from mx.victim-enterprise.org (mx.victim-enterprise.org [198.51.100.88])
+    by gateway.victim-enterprise.org with ESMTP id 98124
+    for <finance@victim-enterprise.org>; Wed, 02 Sep 2026 11:30:40 +0000
+Received: from transit-node-09.hetzner-demo.de (transit-node-09.hetzner-demo.de [198.51.100.25])
+    by mx.victim-enterprise.org with ESMTP id 12903;
+    Wed, 02 Sep 2026 11:30:15 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html>
+<html>
+<body>
+<p>Dear Finance Director,</p>
+<p>Our records show that invoice <b>#INV-884920</b> for $64,200.00 is currently <b>14 days overdue</b>.</p>
+<p style="color: red; font-weight: bold;">CRITICAL NOTICE: Due to our recent corporate banking transition, our previous bank account has been permanently closed.</p>
+<p>Please update your remittance records immediately and execute the wire transfer to our new offshore settlement account:</p>
+<ul>
+    <li><b>Beneficiary Bank:</b> Global Commercial Trust Bank</li>
+    <li><b>Account Name:</b> Supplies Logistics Global Escrow Ltd</li>
+    <li><b>Routing / Swift:</b> GCTBUS33XXX</li>
+    <li><b>Account Number:</b> 9812-4091-8821</li>
+    <li><b>Bitcoin Escrow Alternative:</b> 1BoatSLRHtKNngkdXEeobR76b53LETtpyT</li>
+</ul>
+<p>Please remit wire transfer receipt within 24 hours to avoid immediate service suspension and collection charges.</p>
+<p><a href="http://billing-settlement-portal.top/invoices/download?id=884920">Download Certified Pro-Forma Invoice PDF</a></p>
+<p>Sincerely,<br/>David Miller, Financial Comptroller</p>
+</body>
+</html>
